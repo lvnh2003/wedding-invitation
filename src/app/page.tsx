@@ -1,65 +1,70 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [isAnimating, setIsAnimating] = useState(true);
+
+  useEffect(() => {
+    // Animation completes after 2 seconds
+    const timer = setTimeout(() => {
+      setIsAnimating(false);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="relative w-full h-screen overflow-hidden bg-white">
+      {/* Container for both curtains - no gap between them */}
+      <div className="relative w-full h-full flex">
+        {/* Left curtain - slides to the left, positioned on top with z-10 */}
+        <div
+          className={`relative h-full w-1/2 transition-transform duration-[1000ms] ease-out z-10 ${
+            isAnimating ? "translate-x-0" : "-translate-x-[120%]"
+          }`}
+        >
+          <div
+            className="relative w-full h-full overflow-visible bg-cover bg-center"
+            style={{ backgroundImage: "url(/bg-side.png)" }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-20">
+              <Image
+                src="/icon.png"
+                alt="Left curtain icon"
+                width={100}
+                height={100}
+                className="block"
+              />
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+
+        {/* Right curtain - slides to the right */}
+        <div
+          className={`relative h-full w-1/2 transition-transform duration-[1000ms] ease-out z-0 ${
+            isAnimating ? "translate-x-0" : "translate-x-full"
+          }`}
+        >
+          <div
+            className="relative w-full h-full overflow-hidden bg-cover bg-center"
+            style={{ backgroundImage: "url(/bg-side.png)" }}
+          />
+        </div>
+      </div>
+
+      {/* Content revealed after curtains open */}
+      <div
+        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${
+          isAnimating ? "opacity-0" : "opacity-100"
+        }`}
+      >
+        <div className="text-center">
+          <h1 className="text-5xl font-bold text-gray-800 mb-4">Welcome</h1>
+          <p className="text-xl text-gray-600">The curtains have opened</p>
+        </div>
+      </div>
+    </main>
   );
 }
