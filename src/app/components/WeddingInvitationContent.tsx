@@ -577,7 +577,7 @@ export function WeddingInvitationContent({
     <div className={containerClass}>
       <div className="text-center w-full bg-white shadow-lg overflow-hidden">
         <AnimatedSection animationType="zoomIn" delay={0} autoShow={true}>
-          <div className="px-6 pt-8 pb-6">
+          <div className="pb-6">
             <div className="relative -mx-6 overflow-visible">
               <div className="relative">
                 <Image
@@ -594,11 +594,8 @@ export function WeddingInvitationContent({
                   alt="Flower decoration"
                   width={400}
                   height={300}
-                  className="absolute -top-20 -right-10 w-40 h-auto z-10 opacity-70"
+                  className="absolute -top-15 -right-10 w-40 h-auto z-10 opacity-70"
                 />
-
-                <div className="absolute top-0 left-0 right-0 h-50 bg-linear-to-b from-white via-white/30 to-transparent pointer-events-none"></div>
-
                 <div className="absolute bottom-0 left-0 right-0 h-100 bg-linear-to-t from-white via-white/20 to-transparent pointer-events-none"></div>
 
                 <div className="absolute inset-0 bg-white/10 pointer-events-none"></div>
@@ -619,7 +616,7 @@ export function WeddingInvitationContent({
           <div className="flex justify-around items-center flex-col">
             <div>
               <div className="flex justify-around items-center flex-col gap-8 px-4 py-6">
-                <div className="flex justify-center items-start gap-12 w-full">
+                <div className="flex justify-center items-start gap-5 w-full flex-col">
                   {/* Groom's family */}
                   <AnimatedSection animationType="fadeLeft" delay={200}>
                     <h3 className="font-quicksand  text-sm font-semibold text-gray-600 mb-3 tracking-widest">
@@ -639,7 +636,7 @@ export function WeddingInvitationContent({
                   </AnimatedSection>
 
                   {/* Divider */}
-                  <div className="w-px h-24 bg-gray-300"></div>
+                  <div className="h-px w-full bg-gray-300"></div>
 
                   {/* Bride's family */}
                   <AnimatedSection animationType="fadeRight" delay={200}>
@@ -698,7 +695,7 @@ export function WeddingInvitationContent({
             <div className="relative bg-white p-2 sm:p-8 max-w-md w-full">
               {/* Calendar Header */}
               <div className="text-right">
-                <div className="font-motherland-signature text-3xl text-gray-800">
+                <div className="font-quicksand text-3xl text-[#c60025]">
                   Tháng 12{" "}
                   <span className="text-8xl font-bold font-quicksand ">
                     2025
@@ -812,6 +809,7 @@ export function WeddingInvitationContent({
 
         <AnimatedSection animationType="fadeUp" delay={200}>
           <div className="mt-8">
+          <div className="absolute inset-0 bg-[url('/flower.png')] bg-cover bg-center bg-no-repeat opacity-20"></div>
             <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
               <Timeline />
               <div className="flex justify-end w-full -mt-20">
@@ -824,7 +822,7 @@ export function WeddingInvitationContent({
         <AnimatedSection animationType="fadeUp" delay={250}>
           <div className="border-t border-gray-200 mt-12 pt-12 pb-8">
             <div className="space-y-4">
-              <p className="font-motherland-signature text-4xl text-[#c60025] mb-6">
+              <p className="font-quicksand text-4xl text-[#c60025] mb-6">
                 Rất Hân Hạnh Được Đón Tiếp
               </p>
 

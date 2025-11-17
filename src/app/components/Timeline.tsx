@@ -47,9 +47,9 @@ export function Timeline() {
   return (
     <div
       ref={ref}
-      className="relative w-4/5 pt-4 pb-12 px-4 ml-8 shadow-xl border border-[#e8a0ae]/30 backdrop-blur-sm"
+      className="relative w-4/5 pt-4 pb-12 px-4 ml-8 border border-[#e8a0ae]/30 rounded-2xl"
     >
-      <div className="text-4xl font-motherland-signature py-2 mb-3 text-center">
+      <div className="text-4xl font-quicksand py-2 mb-3 text-center">
         Timeline
       </div>
       <div className="h-px bg-[#c60025] mb-4 w-1/3 mx-auto" />
@@ -78,13 +78,13 @@ export function Timeline() {
                 {/* Card bên trái */}
                 {isLeft && (
                   <div className="w-1/2 pr-8 text-center">
-                    <div className="bg-white">
+                    <div>
                       <div className="flex justify-center mb-1">
-                        <span className="font-quicksand text-4xl text-[#c60025]">
+                        <span className="font-quicksand text-4xl">
                           {event.time}
                         </span>
                       </div>
-                      <h3 className="font-quicksand text-xl text-[#c60025]">
+                      <h3 className="font-quicksand text-xl">
                         {event.title}
                       </h3>
                     </div>
@@ -104,13 +104,13 @@ export function Timeline() {
                 {/* Card bên phải */}
                 {!isLeft && (
                   <div className="w-1/2 pl-8 text-left">
-                    <div className="bg-white">
+                    <div>
                       <div className="flex justify-center mb-1">
-                        <span className="font-quicksand text-4xl text-[#c60025]">
+                        <span className="font-quicksand text-4xl">
                           {event.time}
                         </span>
                       </div>
-                      <h3 className="font-quicksand text-xl text-[#c60025]">
+                      <h3 className="font-quicksand text-xl">
                         {event.title}
                       </h3>
                     </div>
