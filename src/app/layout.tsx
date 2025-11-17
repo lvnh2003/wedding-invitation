@@ -13,9 +13,16 @@ const roboto = localFont({
   variable: "--font-roboto",
   display: "swap",
 });
+
+const quicksand = localFont({
+  src: './fonts/Quicksand-Regular.ttf',
+  variable: '--font-quicksand',
+  display: 'swap',
+});
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${motherlandSignature.variable} ${roboto.variable}`}>
+    <html lang="en" className={`${motherlandSignature.variable} ${roboto.variable} ${quicksand.variable}`}>
       <body className="antialiased">{children}</body>
     </html>
   );

@@ -284,7 +284,7 @@ function PhotoAlbum() {
   return (
     <div ref={containerRef} className="py-8 px-6">
       <AnimatedSection animationType="fadeUp" delay={0} autoShow={isVisible}>
-        <h2 className="font-motherland-signature text-3xl text-gray-800 text-center mb-8">
+        <h2 className="font-quicksand text-3xl text-gray-800 text-center mb-8">
           Album Ảnh
         </h2>
       </AnimatedSection>
@@ -575,7 +575,7 @@ export function WeddingInvitationContent({
 
   return (
     <div className={containerClass}>
-      <div className="text-center w-full bg-white shadow-lg overflow-hidden pb-8">
+      <div className="text-center w-full bg-white shadow-lg overflow-hidden">
         <AnimatedSection animationType="zoomIn" delay={0} autoShow={true}>
           <div className="px-6 pt-8 pb-6">
             <div className="relative -mx-6 overflow-visible">
@@ -594,7 +594,7 @@ export function WeddingInvitationContent({
                   alt="Flower decoration"
                   width={400}
                   height={300}
-                  className="absolute -top-40 -right-20 w-70 h-auto z-10"
+                  className="absolute -top-20 -right-10 w-40 h-auto z-10 opacity-70"
                 />
 
                 <div className="absolute top-0 left-0 right-0 h-50 bg-linear-to-b from-white via-white/30 to-transparent pointer-events-none"></div>
@@ -622,18 +622,18 @@ export function WeddingInvitationContent({
                 <div className="flex justify-center items-start gap-12 w-full">
                   {/* Groom's family */}
                   <AnimatedSection animationType="fadeLeft" delay={200}>
-                    <h3 className="font-roboto text-sm font-semibold text-gray-600 mb-3 tracking-widest">
+                    <h3 className="font-quicksand  text-sm font-semibold text-gray-600 mb-3 tracking-widest">
                       NHÀ TRAI
                     </h3>
                     <div className="space-y-1">
-                      <p className="font-roboto text-base md:text-lg font-bold text-gray-800">
+                      <p className="font-quicksand text-base md:text-lg font-bold text-gray-800 whitespace-nowrap">
                         ÔNG: TRÀ QUỐC BẢO
                       </p>
-                      <p className="font-roboto text-base md:text-lg font-bold text-gray-800">
+                      <p className="font-quicksand  text-base md:text-lg font-bold text-gray-800">
                         BÀ: NGUYỄN THỊ HỒNG VÂN
                       </p>
                     </div>
-                    <p className="font-roboto text-sm text-gray-600 mt-2">
+                    <p className="font-quicksand  text-sm text-gray-600 mt-2">
                       Tam Kỳ, Quảng Nam
                     </p>
                   </AnimatedSection>
@@ -643,18 +643,18 @@ export function WeddingInvitationContent({
 
                   {/* Bride's family */}
                   <AnimatedSection animationType="fadeRight" delay={200}>
-                    <h3 className="font-roboto text-sm font-semibold text-gray-600 mb-3 tracking-widest">
+                    <h3 className="font-quicksand  text-sm font-semibold text-gray-600 mb-3 tracking-widest">
                       NHÀ GÁI
                     </h3>
                     <div className="space-y-1">
-                      <p className="font-roboto text-base md:text-lg font-bold text-gray-800">
+                      <p className="font-quicksand  text-base md:text-lg font-bold text-gray-800 whitespace-nowrap">
                         ÔNG: TRÀ QUỐC BẢO
                       </p>
-                      <p className="font-roboto text-base md:text-lg font-bold text-gray-800">
+                      <p className="font-quicksand  text-base md:text-lg font-bold text-gray-800">
                         BÀ: NGUYỄN THỊ HỒNG VÂN
                       </p>
                     </div>
-                    <p className="font-roboto text-sm text-gray-600 mt-2">
+                    <p className="font-quicksand  text-sm text-gray-600 mt-2">
                       Tam Kỳ, Quảng Nam
                     </p>
                   </AnimatedSection>
@@ -684,8 +684,8 @@ export function WeddingInvitationContent({
           <div className="flex justify-around items-center mt-3">
             <div>10 giờ 00</div>
             <div className="flex justify-around items-center flex-col border-l border-r px-4 gap-2">
-              <div className="font-roboto text-sm">Chủ Nhật</div>
-              <div className="font-roboto text-4xl font-bold">14</div>
+              <div className="font-quicksand  text-sm">Chủ Nhật</div>
+              <div className="font-quicksand  text-4xl font-bold">14</div>
               <div>Tháng 12</div>
             </div>
             <div>Năm 2025</div>
@@ -700,7 +700,9 @@ export function WeddingInvitationContent({
               <div className="text-right">
                 <div className="font-motherland-signature text-3xl text-gray-800">
                   Tháng 12{" "}
-                  <span className="text-8xl font-bold font-roboto">2025</span>
+                  <span className="text-8xl font-bold font-quicksand ">
+                    2025
+                  </span>
                 </div>
               </div>
 
@@ -718,7 +720,7 @@ export function WeddingInvitationContent({
                 ].map((day, idx) => (
                   <div
                     key={idx}
-                    className="text-center font-roboto text-xs sm:text-sm font-semibold bg-gray-600 text-white py-2 border-r border-b border-gray-200 last:border-r-0"
+                    className="text-center font-quicksand  text-xs sm:text-sm font-semibold bg-gray-600 text-white py-2 border-r border-b border-gray-200 last:border-r-0"
                   >
                     {day}
                   </div>
@@ -759,7 +761,7 @@ export function WeddingInvitationContent({
                     days.push(
                       <div
                         key={day}
-                        className={`aspect-square flex items-center justify-center font-roboto border-r border-b border-gray-200 relative ${
+                        className={`aspect-square flex items-center justify-center font-quicksand  border-r border-b border-gray-200 relative ${
                           isLastInRow ? "border-r-0" : ""
                         } ${isLastRow ? "border-b-0" : ""} ${
                           isWeddingDay
@@ -771,18 +773,12 @@ export function WeddingInvitationContent({
                       >
                         {isWeddingDay ? (
                           <>
-                            {/* Red heart with border */}
-                            <svg
-                              className="absolute w-8 h-8 sm:w-10 sm:h-10 text-[#c60025]"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                            </svg>
+                            <Image
+                              src={"/heart.png"}
+                              width={60}
+                              height={10}
+                              alt="heart"
+                            />
                             {/* Day number inside heart */}
                             <span className="absolute text-black font-bold text-xs sm:text-sm z-10">
                               {day}
@@ -804,7 +800,7 @@ export function WeddingInvitationContent({
 
         <AnimatedSection animationType="fadeUp" delay={200}>
           <div>
-            <div className="font-motherland-signature text-2xl mt-2">
+            <div className="font-quicksand text-2xl mt-2">
               Xác Nhận Tham Dự
               <br /> & <br /> Gửi Lời Chúc
             </div>
@@ -813,100 +809,14 @@ export function WeddingInvitationContent({
         <AnimatedSection animationType="fadeUp" delay={250}>
           <RSVPForm />
         </AnimatedSection>
-        <AnimatedSection animationType="zoomIn" delay={200}>
-          <div className="px-6 py-8">
-            <div className="max-w-2xl mx-auto">
-              <h3 className="font-motherland-signature text-3xl text-gray-800 mb-6">
-                Địa Điểm Tổ Chức
-              </h3>
 
-              <div className="bg-gradient-to-br from-[#f5f5f5] to-[#efefef] rounded-2xl p-6 sm:p-8 border-2 border-[#c60025] shadow-lg hover:shadow-xl transition-shadow duration-300">
-                {/* Venue Name */}
-                <div className="mb-6">
-                  <h4 className="font-motherland-signature text-4xl text-[#c60025] mb-2">
-                    MƯỜNG THANH
-                  </h4>
-                  <div className="h-1 w-20 bg-gradient-to-r from-[#c60025] to-transparent rounded-full"></div>
-                </div>
-
-                {/* Address */}
-                <div className="space-y-3 mb-8">
-                  <div className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-[#c60025] flex-shrink-0 mt-0.5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      />
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-roboto text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                        Địa chỉ
-                      </p>
-                      <p className="font-roboto text-lg text-gray-800 mt-1">
-                        Quận Tân Phú, Hồ Chí Minh
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <svg
-                      className="w-5 h-5 text-[#c60025] flex-shrink-0 mt-0.5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                    <div>
-                      <p className="font-roboto text-sm font-semibold text-gray-600 uppercase tracking-wide">
-                        Giờ
-                      </p>
-                      <p className="font-roboto text-lg text-gray-800 mt-1">
-                        10:00 - 12:00
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Direction Button */}
-                <button
-                  className="w-full text-black bg-white py-3 rounded-lg font-roboto uppercase tracking-widest shadow-lg hover:shadow-xl hover:from-[#a0001e] hover:to-[#800015] transition-all duration-300 transform hover:scale-105"
-                  onClick={() =>
-                    window.open(
-                      "https://maps.app.goo.gl/JyS5hU4AHg2hypMa9",
-                      "_blank"
-                    )
-                  }
-                >
-                  Xem Chỉ Đường
-                </button>
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
         <AnimatedSection animationType="fadeUp" delay={200}>
-          <div className="border-t border-gray-200 mt-8">
-            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-8 lg:gap-0">
+          <div className="mt-8">
+            <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
               <Timeline />
-              <DressCode />
+              <div className="flex justify-end w-full -mt-20">
+                <DressCode />
+              </div>
             </div>
           </div>
         </AnimatedSection>
@@ -919,10 +829,10 @@ export function WeddingInvitationContent({
               </p>
 
               <div className="space-y-2">
-                <p className="font-roboto text-lg font-bold text-gray-800">
+                <p className="font-quicksand  text-lg font-bold text-gray-800">
                   Quốc Điển & Ái Tiên
                 </p>
-                <p className="font-roboto text-gray-600">
+                <p className="font-quicksand  text-gray-600">
                   Chủ Nhật, 14 Tháng 12 Năm 2025
                 </p>
               </div>
@@ -958,6 +868,53 @@ export function WeddingInvitationContent({
                     <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225 1.664 4.771 4.919 4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.015-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zM5.838 12a6.162 6.162 0 1 1 12.324 0 6.162 6.162 0 0 1-12.324 0zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm4.965-10.322a1.44 1.44 0 1 1 2.881.001 1.44 1.44 0 0 1-2.881-.001z" />
                   </svg>
                 </a>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+        <AnimatedSection animationType="zoomIn" delay={0} autoShow={true}>
+          <div className="px-6 pt-8">
+            <div className="relative -mx-6 overflow-visible">
+              <div className="relative">
+                <Image
+                  src="/footer.png"
+                  alt="Couple photo"
+                  width={400}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                  priority
+                />
+
+                {/* lớp mờ trắng phía trên */}
+                <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-transparent pointer-events-none" />
+
+                {/* Text kiểu Event Highlights */}
+                <div className="absolute top-6 left-6 right-10 md:left-10 md:top-10">
+                  <div className="text-3xl leading-tight font-quicksand">
+                    Địa Điểm Tổ Chức
+                  </div>
+
+                  <div className="mt-4 space-y-2 font-quicksand text-lg">
+                    <div className="flex items-center justify-between border-b border-black/10 pb-1">
+                      <span className="text-gray-500">Địa chỉ</span>
+                      <span className="ml-3">
+                        Nhà hàng ABC – Quận 1, TP.HCM
+                      </span>
+                    </div>
+                    <div className="flex items-center justify-between border-b border-black/10 pb-1">
+                      <span className="text-gray-500">
+                        Thời gian
+                      </span>
+                      <span className="ml-3">10:00 – 12:00, 14/12/2025</span>
+                    </div>
+                    <div className="flex items-center justify-between pb-1">
+                      <span className="text-gray-500">Gửi xe</span>
+                      <span className="ml-3">
+                        Bãi xe ngay trước sảnh chính
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

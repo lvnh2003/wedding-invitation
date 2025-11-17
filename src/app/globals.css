@@ -12,6 +12,7 @@
   --font-mono: var(--font-geist-mono);
   --font-roboto: var(--font-roboto);
   --font-motherland-signature: var(--font-motherland-signature);
+  --font-quicksand: var(--font-quicksand);
 }
 
 .font-roboto {
@@ -20,6 +21,10 @@
 
 .font-motherland-signature {
   font-family: var(--font-motherland-signature), cursive;
+}
+
+.font-quicksand {
+  font-family: var(--font-quicksand), cursive;
 }
 
 @media (prefers-color-scheme: dark) {
